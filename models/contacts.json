@@ -35,19 +35,7 @@
     "email": "scelerisque@magnis.org",
     "phone": "(186) 568-3720"
   },
-  {
-    "id": "11111",
-    "name": "Alec 333333",
-    "email": "Donec.elementum@scelerisquescelerisquedui.net",
-    "phone": "(748) 206-2688"
-  },
-  {
-    "id": "11",
-    "name": "Alec 2222222",
-    "email": "Donec.elementum@scelerisquescelerisquedui.net",
-    "phone": "(748) 206-2688"
-  },
-  {
+    {
     "id": "9",
     "name": "Thomas Lucas",
     "email": "nec@Nulla.com",
@@ -58,11 +46,6 @@
     "name": "Alec Howard",
     "email": "Donec.elementum@scelerisquescelerisquedui.net",
     "phone": "(748) 206-2688"
-  },
-  {
-    "id": "11",
-    "name": "Alec 11111",
-    "email": "Donec.elementum@scelerisquescelerisquedui.net",
-    "phone": "(748) 206-2688"
   }
+
 ]
