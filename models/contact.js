@@ -46,11 +46,11 @@ const updateSchema = Joi.object({
   phone: Joi.string(),
 });
 
-const updateFavoureteSchema = Joi.object({
-  favourite: Joi.boolean().required(),
+const updateFavoriteSchema = Joi.object({
+  favorite: Joi.boolean().required(),
 });
 
-const schemas = { addSchema, updateSchema, updateFavoureteSchema };
+const schemas = { addSchema, updateSchema, updateFavoriteSchema };
 const Contact = model("contact", contactSchema);
 
 module.exports = { Contact, schemas };

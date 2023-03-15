@@ -12,9 +12,9 @@ router.post("/", isValidId, validateBody(schemas.addSchema), ctrl.addContact);
 router.put("/:id", validateBody(schemas.updateSchema), ctrl.updateContact);
 
 router.patch(
-  "/:id/favourite",
+  "/:id/favorite",
   isValidId,
-  validateBody(schemas.updateFavoureteSchema),
+  validateBody(schemas.updateFavoriteSchema),
   ctrl.updateStatusContact
 );
 
