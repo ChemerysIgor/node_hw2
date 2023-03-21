@@ -19,6 +19,11 @@ const contactSchema = new Schema(
       type: Boolean,
       default: false,
     },
+    owner: {
+      type: Schema.Types.ObjectId,
+      ref: "user",
+      required: true,
+    },
   },
   { versionKey: false, timestamps: true }
 );
@@ -26,31 +31,28 @@ const contactSchema = new Schema(
 contactSchema.post("save", handleMongooseError);
 
 const addSchema = Joi.object({
-  id: Joi.string().required(),
   name: Joi.string().required(),
-  email: Joi.string()
-    .email({
-      minDomainSegments: 2,
-    })
-    .required(),
+  email: Joi.string().email({ minDomainSegments: 2 }).required(),
   phone: Joi.string().required(),
   favourite: Joi.boolean(),
 });
 
 const updateSchema = Joi.object({
-  id: Joi.string(),
   name: Joi.string(),
-  email: Joi.string().email({
-    minDomainSegments: 2,
-  }),
+  email: Joi.string().email({ minDomainSegments: 2 }),
   phone: Joi.string(),
+  favourite: Joi.boolean(),
 });
 
 const updateFavoriteSchema = Joi.object({
   favorite: Joi.boolean().required(),
 });
 
-const schemas = { addSchema, updateSchema, updateFavoriteSchema };
+const schemas = {
+  addSchema,
+  updateSchema,
+  updateFavoriteSchema,
+};
 const Contact = model("contact", contactSchema);
 
 module.exports = { Contact, schemas };
