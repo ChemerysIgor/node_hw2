@@ -10,6 +10,14 @@ const ctrl = require("../../controlers/auth");
 
 router.post("/register", validateBody(schemas.registerSchema), ctrl.register);
 
+router.get("/verify/:verificationCode", ctrl.verifyEmail);
+
+router.get(
+  "/verify",
+  validateBody(schemas.emailSchema),
+  ctrl.resentVerifyEmail
+);
+
 router.post("/login", validateBody(schemas.loginSchema), ctrl.login);
 
 router.post(
